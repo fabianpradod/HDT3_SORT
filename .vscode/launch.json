@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "HDT3_SORT_cc530658"
+        },
+        {
+            "type": "java",
+            "request": "launch",
+            "name": "main",
+            "mainClass": "Main",
+            "projectName": "HDT3_SORT",
+            "vmArgs": "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=5005 -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=127.0.0.1"
+        }
+    ]
+}
