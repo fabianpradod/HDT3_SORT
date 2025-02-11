@@ -21,12 +21,12 @@ public class Main {
         testAlgorithm("MergeSort", unsortedLists, sortedLists);
         testAlgorithm("QuickSort", unsortedLists, sortedLists);
         testAlgorithm("RadixSort", unsortedLists, sortedLists);
-        testAlgorithm("BinaryInsertionSort", unsortedLists, sortedLists);
+        testAlgorithm("BinarySort", unsortedLists, sortedLists);
     }
 
     // Metodo para probar los algoritmos de ordenamiento. Toma el nombre del algoritmo y ambas Arrays de listas
     private static void testAlgorithm(String algorithm, ArrayList<ArrayList<Integer>> unsortedLists, ArrayList<ArrayList<Integer>> sortedLists) {
-        System.out.println("Testing " + algorithm);
+        System.out.println("Probando " + algorithm);
 
         // Itererar por cada lista para cada algoritmo
         for (int i = 0; i < unsortedLists.size(); i++) {
@@ -37,12 +37,13 @@ public class Main {
             ArrayList<Integer> sortedListToSort = new ArrayList<>(sortedLists.get(i));
 
             // Ordenar las listas desordenadas
+            System.out.println("Tamaño " + size + " (Desordenado)");
             callSort(algorithm, listToSort);
-            System.out.println("  Size " + size + " (Unsorted)");
+            
 
             // Ordenar las listas ya ordenadas
+            System.out.println("Tamaño " + size + " (Ordenado)");
             callSort(algorithm, sortedListToSort);
-            System.out.println("  Size " + size + " (Sorted)");
         }
 
         System.out.println();
@@ -65,16 +66,16 @@ public class Main {
             case "RadixSort":
                 Radixsort.radixSort(list);
                 break;
-            case "BinaryInsertionSort":
+            case "BinarySort":
                 BinarySort.binarySort(list);
                 break;
             default:
-                throw new IllegalArgumentException("Unknown sorting algorithm: " + algorithm);
+                break;
         }
     
         long endTime = System.nanoTime(); // Terminar el timer
-        long tiempo = (endTime - startTime);
+        long tiempo = (endTime - startTime)/1000;
     
-        System.out.println("    Tiempo: " + tiempo + "ns");
+        System.out.println("    Tiempo: " + tiempo + " microsegundos\n");
     }   
 }
