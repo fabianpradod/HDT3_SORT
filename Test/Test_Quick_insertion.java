@@ -1,7 +1,11 @@
+package Test;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import src.QuickSort;
+import src.ListGenerator;
+import src.InsertionSort;
 
 public class Test_Quick_insertion {
     @Test
